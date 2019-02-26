@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'resume_parser.urls'
@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'resume_parser.wsgi.application'
 
-X_FRAME_OPTIONS = 'DENY'
+# X_FRAME_OPTIONS = 'DENY'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
