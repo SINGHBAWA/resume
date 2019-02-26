@@ -6,8 +6,10 @@ from main_app.utils.ip_location_utils import get_ip_address, get_city, get_locat
 from main_app.utils.sf_api import SFConnectAPI
 from main_app.utils.drive_utils import get_folder_id
 import re
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 
+@xframe_options_exempt
 def home(request):
     sf = SFConnectAPI()
     designations = sf.get_position_values()
@@ -17,6 +19,7 @@ def home(request):
                   {'designations': designations})
 
 
+@xframe_options_exempt
 def upload_details(request):
     try:
         if request.method == 'POST':
