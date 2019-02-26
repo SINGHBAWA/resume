@@ -73,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'resume_parser.wsgi.application'
 
+X_FRAME_OPTIONS = 'DENY'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
